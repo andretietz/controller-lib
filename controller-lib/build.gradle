@@ -5,10 +5,10 @@ android {
     buildToolsVersion "22.0.0"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 7
         targetSdkVersion 22
         versionCode 1
-        versionName "0.0.1"
+        versionName "0.0.2"
     }
     buildTypes {
         release {
