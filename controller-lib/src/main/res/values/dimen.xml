@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_action_button_background">150dp</dimen>
+    <dimen name="size_action_button_item">50dp</dimen>
+
+    <dimen name="size_direction_button_background">150dp</dimen>
+    <dimen name="size_direction_button_item">50dp</dimen>
+
+    <integer name="vector_stroke_width">2</integer>
+    <integer name="background_viewportsize">100</integer>
+    <integer name="item_viewportsize">30</integer>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="default_actionview">
+        <!-- InputView -->
+        <item name="inputBackground">@drawable/action_background</item>
+        <item name="mode">multi</item>
+        <item name="buttonSpin">45.0</item>
+        <item name="vibrate">true</item>
+        <item name="deadZone">0.3</item>
+        <item name="buttonCenterDistance">0.571</item>
+        <!-- ActionView -->
+        <item name="button1_enabled">@drawable/action_usual</item>
+        <item name="button1_pressed">@drawable/action_pressed</item>
+        <item name="button2_enabled">@drawable/action_usual</item>
+        <item name="button2_pressed">@drawable/action_pressed</item>
+        <item name="button3_enabled">@drawable/action_usual</item>
+        <item name="button3_pressed">@drawable/action_pressed</item>
+        <item name="button4_enabled">@drawable/action_usual</item>
+        <item name="button4_pressed">@drawable/action_pressed</item>
+    </style>
+
+    <style name="default_directionview">
+        <!-- InputView -->
+        <item name="inputBackground">@drawable/direction_background</item>
+        <item name="buttonSpin">22.5</item>
+        <item name="mode">single</item>
+        <item name="deadZone">0.5</item>
+        <item name="vibrate">true</item>
+        <item name="buttonCenterDistance">0.45</item>
+        <!-- DirectionView -->
+        <item name="button_r_normal">@drawable/direction_right_usual</item>
+        <item name="button_r_pressed">@drawable/direction_right_pressed</item>
+        <item name="button_d_normal">@drawable/direction_down_usual</item>
+        <item name="button_d_pressed">@drawable/direction_down_pressed</item>
+        <item name="button_l_normal">@drawable/direction_left_usual</item>
+        <item name="button_l_pressed">@drawable/direction_left_pressed</item>
+        <item name="button_u_normal">@drawable/direction_up_usual</item>
+        <item name="button_u_pressed">@drawable/direction_up_pressed</item>
+    </style>
+</resources>

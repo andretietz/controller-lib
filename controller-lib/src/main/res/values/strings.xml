@@ -1,0 +1,12 @@
+<resources>
+    <string name="vectorpath_action_background" translatable="false">M50,50 m-15,-15 a 20,20 0 1,1 30,0 a 20,20 0 1,1 0,30 a 20,20 0 1,1 -30,0 a 20,20 0 1,1 0,-30z</string>
+    <string name="vectorpath_action_item_usual" translatable="false">M1,15 a 14,14 0 1,1 28,0 a 14,14 0 1,1 -28,0z</string>
+    <string name="vectorpath_action_item_pressed" translatable="false">M0,15 a 15,15 0 1,1 30,0 a 15,15 0 1,1 -30,0z</string>
+
+    <string name="vectorpath_direction_background" translatable="false">M1,29 l28,0 l0,-28 l42,0 l0,28 l28,0 l0,42 l-28,0 l0,28 l-42,0 l0,-28 l-28,0 l0,-42z</string>
+    <string name="vectorpath_direction_up" translatable="false">M15,29 m-2,-2 l-8,-8 l0,-14 a17,17 0 0,1 20,0 l0,14 l-8,8 a3,3 0 0,1 -4,0z</string>
+    <string name="vectorpath_direction_down" translatable="false">M15,1 m2,2 l8,8 l0,14 a17,17 0 0,1 -20,0 l0,-14 l8,-8 a3,3 0 0,1 4,0z</string>
+    <string name="vectorpath_direction_right" translatable="false">M1,15 m2,-2 l8,-8 l14,0 a17,17 0 0,1 0,20 l-14,0 l-8,-8 a3,3 0 0,1 0,-4z</string>
+    <string name="vectorpath_direction_left" translatable="false">M29,15 m-2,-2 l-8,-8 l-14,0 a17,17 0 0,0 0,20 l14,0 l8,-8 a3,3 0 0,0 0,-4z</string>
+
+</resources>

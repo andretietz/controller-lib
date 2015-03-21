@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputView">
+        <attr name="inputBackground" format="reference"/>
+        <attr name="deadZone" format="float"/>
+        <attr name="buttonCenterDistance" format="float"/>
+        <attr name="buttonSpin" format="float"/>
+        <attr name="vibrate" format="boolean"/>
+        <attr name="debug_drawDeadZone" format="boolean"/>
+        <attr name="debug_drawPieces" format="boolean"/>
+        <attr name="mode" format="enum">
+            <enum name="single" value="0"/>
+            <enum name="multi" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ActionView">
+        <attr name="button1_enabled" format="reference"/>
+        <attr name="button2_enabled" format="reference"/>
+        <attr name="button3_enabled" format="reference"/>
+        <attr name="button4_enabled" format="reference"/>
+        <attr name="button1_pressed" format="reference"/>
+        <attr name="button2_pressed" format="reference"/>
+        <attr name="button3_pressed" format="reference"/>
+        <attr name="button4_pressed" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="DirectionView">
+        <attr name="diagonal_mode" format="enum">
+            <enum name="drawable" value="0"/>
+            <enum name="between" value="1"/>
+        </attr>
+        <attr name="button_r_normal" format="reference"/>
+        <attr name="button_r_pressed" format="reference"/>
+        <attr name="button_dr_normal" format="reference"/>
+        <attr name="button_dr_pressed" format="reference"/>
+        <attr name="button_d_normal" format="reference"/>
+        <attr name="button_d_pressed" format="reference"/>
+        <attr name="button_dl_normal" format="reference"/>
+        <attr name="button_dl_pressed" format="reference"/>
+        <attr name="button_l_normal" format="reference"/>
+        <attr name="button_l_pressed" format="reference"/>
+        <attr name="button_ul_normal" format="reference"/>
+        <attr name="button_ul_pressed" format="reference"/>
+        <attr name="button_u_normal" format="reference"/>
+        <attr name="button_u_pressed" format="reference"/>
+        <attr name="button_ur_normal" format="reference"/>
+        <attr name="button_ur_pressed" format="reference"/>
+    </declare-styleable>
+</resources>
