@@ -4,7 +4,7 @@
         <attr name="inputBackground" format="reference"/>
         <attr name="deadZone" format="float"/>
         <attr name="buttonCenterDistance" format="float"/>
-        <attr name="buttonSpin" format="float"/>
+        <attr name="rotateButtons" format="float"/>
         <attr name="vibrate" format="boolean"/>
         <attr name="debug_drawDeadZone" format="boolean"/>
         <attr name="debug_drawPieces" format="boolean"/>

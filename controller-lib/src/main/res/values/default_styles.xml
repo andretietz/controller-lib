@@ -4,7 +4,7 @@
         <!-- InputView -->
         <item name="inputBackground">@drawable/action_background</item>
         <item name="mode">multi</item>
-        <item name="buttonSpin">45.0</item>
+        <item name="rotateButtons">45.0</item>
         <item name="vibrate">false</item>
         <item name="deadZone">0.3</item>
         <item name="buttonCenterDistance">0.571</item>
@@ -22,7 +22,7 @@
     <style name="default_directionview">
         <!-- InputView -->
         <item name="inputBackground">@drawable/direction_background</item>
-        <item name="buttonSpin">22.5</item>
+        <item name="rotateButtons">22.5</item>
         <item name="mode">single</item>
         <item name="deadZone">0.3</item>
         <item name="vibrate">false</item>
