@@ -28,6 +28,7 @@
         <item name="vibrate">false</item>
         <item name="buttonCenterDistance">0.45</item>
         <!-- DirectionView -->
+        <item name="diagonal_mode">true</item>
         <item name="button_r_normal">@drawable/direction_right_usual</item>
         <item name="button_r_pressed">@drawable/direction_right_pressed</item>
         <item name="button_d_normal">@drawable/direction_down_usual</item>

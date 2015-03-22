@@ -6,7 +6,6 @@
                 tools:context=".ControllerActivity">
 
     <com.unicate.controller.views.DirectionView
-        app:vibrate="true"
         android:id="@+id/viewDirection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
