@@ -4,7 +4,7 @@
         <attr name="inputBackground" format="reference"/>
         <attr name="deadZone" format="float"/>
         <attr name="buttonCenterDistance" format="float"/>
-        <attr name="buttonSpin" format="float"/>
+        <attr name="rotateButtons" format="float"/>
         <attr name="vibrate" format="boolean"/>
         <attr name="debug_drawDeadZone" format="boolean"/>
         <attr name="debug_drawPieces" format="boolean"/>
@@ -26,10 +26,7 @@
     </declare-styleable>
 
     <declare-styleable name="DirectionView">
-        <attr name="diagonal_mode" format="enum">
-            <enum name="drawable" value="0"/>
-            <enum name="between" value="1"/>
-        </attr>
+        <attr name="diagonal_mode" format="boolean" />
         <attr name="button_r_normal" format="reference"/>
         <attr name="button_r_pressed" format="reference"/>
         <attr name="button_dr_normal" format="reference"/>

@@ -115,9 +115,9 @@ public abstract class InputView extends View {
         // read the attributes from xml
         int background = a.getResourceId(R.styleable.InputView_inputBackground, R.drawable.action_background);
         try {
-            // this is an additional spin parameter,where you can spin the whole view
-            degrees = a.getFloat(R.styleable.InputView_buttonSpin, 0);
-            // this is an additional spin parameter,where you can spin the whole view
+            // this is an additional spin parameter,where you can rotate the whole view
+            degrees = a.getFloat(R.styleable.InputView_rotateButtons, 0);
+
             mode = Mode.values()[a.getInteger(R.styleable.InputView_mode, 0)];
             // enable/disable vibrating
             vibratingEnabled = a.getBoolean(R.styleable.InputView_vibrate, false);
