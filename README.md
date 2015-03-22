@@ -51,14 +51,42 @@ compile 'com.github.Unic8:controller-lib:0.0.2'
 
 and in your code create a Helper, add the views to it and set a listener:
 ```java
-ControllerHelper controller = new ControllerHelper((DirectionView) findViewById(R.id.viewDirection), (ActionView) findViewById(R.id.viewAction));
-controller.setControllerInputListener(new ControllerHelper.ControllerInputListener() {
-    @Override public void onInputChanged(ControllerInput input) {
-        Log.e("CHANGE", input.toString());
+ActionView actionView = (ActionView) findViewById(R.id.viewAction);
+actionView.setOnButtonListener(new InputView.InputEventListener() {
+    @Override public void onInputEvent(View view, int buttons) {
+		// foreach button (there are 4 action buttons)
+		for(int i=0;i<4;i++) {
+			// if the bit on position i is set
+			if(((0x01 << i)&buttons)>0) {
+				// Button Number (i+1) is pressed
+			}
+		}
     }
-
-    @Override public void onInputFinished(ControllerInput input) {
-        Log.e("FINISH", input.toString());
+});
+...
+// same for DirectionView
+DirectionView directionView = (DirectionView) findViewById(R.id.viewDirection);
+directionView.setOnButtonListener(new InputView.InputEventListener() {
+    @Override public void onInputEvent(View view, int buttons) {
+		switch (buttons&0xff) {
+			case DirectionView.DIRECTION_DOWN:
+				// do smth.
+				break;
+			case DirectionView.DIRECTION_LEFT:
+				break;
+			case DirectionView.DIRECTION_RIGHT:
+				break;
+			case DirectionView.DIRECTION_UP:
+				break;
+			case DirectionView.DIRECTION_DOWN_LEFT:
+				break;
+			case DirectionView.DIRECTION_UP_LEFT:
+				break;
+			case DirectionView.DIRECTION_DOWN_RIGHT:
+				break;
+			case DirectionView.DIRECTION_UP_RIGHT:
+				break;
+		}
     }
 });
 ```
