@@ -26,7 +26,7 @@ allprojects {
 then add this library as a dependency
 
 ```groovy
-compile 'com.github.Unic8:controller-lib:0.0.2'
+compile 'com.github.Unic8:controller-lib:0.0.4'
 ```
 
 ## Add both of the Views to your layout:
@@ -61,6 +61,7 @@ actionView.setOnButtonListener(new InputView.InputEventListener() {
 				// Button Number (i+1) is pressed
 			}
 		}
+		// if buttons == 0, the user stopped touching the view
     }
 });
 ...
@@ -87,6 +88,8 @@ directionView.setOnButtonListener(new InputView.InputEventListener() {
 			case DirectionView.DIRECTION_UP_RIGHT:
 				break;
 		}
+		
+		// if buttons == 0, the user stopped touching the view
     }
 });
 ```
