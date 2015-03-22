@@ -49,7 +49,7 @@ compile 'com.github.Unic8:controller-lib:0.0.4'
         android:layout_alignParentEnd="true" />
 ```
 
-and in your code create a Helper, add the views to it and set a listener:
+and create listeners for them
 ```java
 ActionView actionView = (ActionView) findViewById(R.id.viewAction);
 actionView.setOnButtonListener(new InputView.InputEventListener() {
