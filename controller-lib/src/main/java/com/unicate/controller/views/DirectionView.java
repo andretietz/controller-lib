@@ -27,6 +27,15 @@ public class DirectionView extends InputView {
 	private static final int BUTTON_UP_LEFT 	= 5;
 	private static final int BUTTON_UP 			= 6;
 	private static final int BUTTON_UP_RIGHT 	= 7;
+
+	public static final int DIRECTION_RIGHT			= 0x01;
+	public static final int DIRECTION_DOWN_RIGHT	= 0x02;
+	public static final int DIRECTION_DOWN			= 0x04;
+	public static final int DIRECTION_DOWN_LEFT		= 0x08;
+	public static final int DIRECTION_LEFT			= 0x10;
+	public static final int DIRECTION_UP_LEFT		= 0x20;
+	public static final int DIRECTION_UP			= 0x40;
+	public static final int DIRECTION_UP_RIGHT		= 0x80;
 	// @formatter:on
 	private boolean diagonalMode = false;
 	private Drawable[][] drawables = new Drawable[BUTTON_COUNT][2];

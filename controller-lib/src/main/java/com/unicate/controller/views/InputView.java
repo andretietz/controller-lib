@@ -29,13 +29,12 @@ public abstract class InputView extends View {
 
 	private Mode mode;
 
-	public void setOnButtonListener(OnInputChangeListener onInputChangeListener) {
-		listener = onInputChangeListener;
+	public void setOnButtonListener(InputEventListener inputEventListener) {
+		listener = inputEventListener;
 	}
 
-	public interface OnInputChangeListener {
-		void onButtonChanged(InputView view, int buttons);
-        void onInputFinished(InputView view);
+	public interface InputEventListener {
+		void onInputEvent(View view, int buttons);
 	}
 
 	public enum ButtonState {
@@ -69,7 +68,7 @@ public abstract class InputView extends View {
 
     private int buttonCount;
 
-    private float deadZone = 200;
+    private float deadZone;
 
     private int buttonsPressed = 0;
 
@@ -77,9 +76,9 @@ public abstract class InputView extends View {
 
     private final float[] pointCenter = new float[]{0,0};
 
-	private float buttonCenterDistance = 0.7f;
+	private float buttonCenterDistance;
 
-	private OnInputChangeListener listener;
+	private InputEventListener listener;
 
 	private boolean drawPieces = false;
 	private boolean drawDeadZone = false;
@@ -124,7 +123,7 @@ public abstract class InputView extends View {
             // set the size of the dead zone of the buttons
             deadZone = a.getFloat(R.styleable.InputView_deadZone, 0);
             // this is the radius of where the bitmaps should appear (from center in percent)
-            buttonCenterDistance = a.getFloat(R.styleable.InputView_buttonCenterDistance, 0.5f);
+            buttonCenterDistance = a.getFloat(R.styleable.InputView_buttonCenterDistance, 0f);
             drawDeadZone = a.getBoolean(R.styleable.InputView_debug_drawDeadZone, false);
             drawPieces = a.getBoolean(R.styleable.InputView_debug_drawPieces, false);
         } finally {
@@ -253,7 +252,7 @@ public abstract class InputView extends View {
 			case MotionEvent.ACTION_UP:
 				buttonsPressed = 0;
                 if(null != listener) {
-                    listener.onInputFinished(this);
+                    listener.onInputEvent(this, buttonsPressed);
                 }
 				invalidate();
 		}
@@ -281,7 +280,7 @@ public abstract class InputView extends View {
 					buttonsPressed = current;
 				}
 				if(null != listener) {
-					listener.onButtonChanged(this, buttonsPressed);
+					listener.onInputEvent(this, buttonsPressed);
 				}
 			}
         }
