@@ -3,11 +3,11 @@ This Android-library should help you to show a common game controller on the scr
 
 At the moment the only supported Buttons are the Directionbuttons (8-way) and the Action-Input of a user, such as on the Playstation- or the XBox-Controller
 
-This library uses VectorDrawable and has downwards support down to API Level 7 (using MrVector)
+This library uses VectorDrawable and has downward-support down to API Level 14 (using vector-compat)
 
 ## Dependencies:
-* [MrVector](https://github.com/telly/MrVector) in Version 0.2.0
-* appcompat
+* [vector-compat](https://github.com/wnafee/vector-compat) in Version 1.0.5
+* appcompat 22.1.1
  
 ## How to use in your project:
 To use this library, add a new repository to your repositories, setup in gradle:
@@ -26,7 +26,7 @@ allprojects {
 then add this library as a dependency
 
 ```groovy
-compile 'com.github.Unic8:controller-lib:0.0.4'
+compile 'com.github.Unic8:controller-lib:0.0.5'
 ```
 
 ## Add both of the Views to your layout:
@@ -102,7 +102,7 @@ Since both views extend from InputView, you can customize a lot with this alread
 ### InputView options:
 
 * inputBackground (vector-drawable reference)
-  * This attribute takes (for now only) a VectorDrawable (Create a VectorDrawable with Lollipop or MrVector)
+  * This attribute takes (for now only) a VectorDrawable (Create the VectorDrawable (xml) vector-compat compatible!)
   * This VectorDrawable defines the size of the View (I should fix that, yes)
 * deadZone (0...1)
   * All Buttons are around the center of the view, like pieces of cake. If the user goes too close to the

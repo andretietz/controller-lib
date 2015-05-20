@@ -18,8 +18,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.telly.mrvector.MrVector;
 import com.unicate.controller.R;
+import com.wnafee.vector.compat.ResourcesCompat;
 
 
 /**
@@ -101,7 +101,6 @@ public abstract class InputView extends View {
     }
 
     protected void init(Context context, AttributeSet attrs, int defStyle) {
-        MrVector.wrap(context);
 		// set the number of buttons that should appear
 		buttonCount = getButtonCount();
 		singleButtonAngle = 360f/buttonCount;
@@ -130,7 +129,7 @@ public abstract class InputView extends View {
             a.recycle();
         }
 
-        Drawable backgroundDrawable = MrVector.inflate(getResources(), background);
+        Drawable backgroundDrawable = ResourcesCompat.getDrawable(getContext(), background);
         height = backgroundDrawable.getIntrinsicHeight();
         width = backgroundDrawable.getIntrinsicWidth();
 

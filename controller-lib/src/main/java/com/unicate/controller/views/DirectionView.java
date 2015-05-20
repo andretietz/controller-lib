@@ -7,8 +7,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 
-import com.telly.mrvector.MrVector;
 import com.unicate.controller.R;
+import com.wnafee.vector.compat.ResourcesCompat;
 
 /**
  * This View can be used for direction input on a game controller. it has 8 different directions,
@@ -97,7 +97,7 @@ public class DirectionView extends InputView {
 			return null;
 		}
 		if (null == drawables[buttonIndex][state.ordinal()]) {
-			drawables[buttonIndex][state.ordinal()] = MrVector.inflate(getResources(), resources[buttonIndex][state.ordinal()]);
+			drawables[buttonIndex][state.ordinal()] = ResourcesCompat.getDrawable(getContext(), resources[buttonIndex][state.ordinal()]);
 		}
 		return drawables[buttonIndex][state.ordinal()];
 	}

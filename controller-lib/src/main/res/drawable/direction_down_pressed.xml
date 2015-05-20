@@ -3,10 +3,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:targetApi="21"
-        app:width="@dimen/size_direction_button_item"
-        app:height="@dimen/size_direction_button_item"
-        app:viewportWidth="@integer/item_viewportsize"
-        app:viewportHeight="@integer/item_viewportsize"
+        app:vc_viewportWidth="@integer/item_viewportsize"
+        app:vc_viewportHeight="@integer/item_viewportsize"
         android:width="@dimen/size_direction_button_item"
         android:height="@dimen/size_direction_button_item"
         android:viewportWidth="@integer/item_viewportsize"
@@ -15,6 +13,6 @@
     <path
         android:fillColor="@color/controller_default"
         android:pathData="@string/vectorpath_direction_down"
-        app:fillColor="@color/controller_default"
-        app:pathData="@string/vectorpath_direction_down" />
+        app:vc_fillColor="@color/controller_default"
+        app:vc_pathData="@string/vectorpath_direction_down" />
 </vector>
