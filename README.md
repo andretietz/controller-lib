@@ -26,7 +26,7 @@ allprojects {
 then add this library as a dependency
 
 ```groovy
-compile 'com.github.Unic8:controller-lib:0.0.4'
+compile 'com.github.Unic8:controller-lib:0.0.5'
 ```
 
 ## Add both of the Views to your layout:
