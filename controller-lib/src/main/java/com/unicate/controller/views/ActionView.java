@@ -7,8 +7,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 
-import com.telly.mrvector.MrVector;
 import com.unicate.controller.R;
+import com.wnafee.vector.compat.ResourcesCompat;
 
 /**
  * This view can be used for action inputs. it has 4 Button, as it is usual
@@ -59,7 +59,7 @@ public class ActionView extends InputView {
 
 	@Override protected Drawable getStateDrawable(int buttonIndex, ButtonState state) {
 		if (null == drawables[buttonIndex][state.ordinal()]) {
-			drawables[buttonIndex][state.ordinal()] = MrVector.inflate(getResources(), resources[buttonIndex][state.ordinal()]);
+			drawables[buttonIndex][state.ordinal()] = ResourcesCompat.getDrawable(getContext(), resources[buttonIndex][state.ordinal()]);
 		}
 		return drawables[buttonIndex][state.ordinal()];
 	}

@@ -3,10 +3,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:targetApi="21"
-        app:width="@dimen/size_direction_button_background"
-        app:height="@dimen/size_direction_button_background"
-        app:viewportWidth="@integer/background_viewportsize"
-        app:viewportHeight="@integer/background_viewportsize"
+        app:vc_viewportWidth="@integer/background_viewportsize"
+        app:vc_viewportHeight="@integer/background_viewportsize"
         android:width="@dimen/size_direction_button_background"
         android:height="@dimen/size_direction_button_background"
         android:viewportWidth="@integer/background_viewportsize"
@@ -16,7 +14,7 @@
         android:strokeWidth="@integer/vector_stroke_width"
         android:strokeColor="@color/controller_default"
         android:pathData="@string/vectorpath_direction_background"
-        app:strokeWidth="@integer/vector_stroke_width"
-        app:strokeColor="@color/controller_default"
-        app:pathData="@string/vectorpath_direction_background"/>
+        app:vc_strokeWidth="@integer/vector_stroke_width"
+        app:vc_strokeColor="@color/controller_default"
+        app:vc_pathData="@string/vectorpath_direction_background"/>
 </vector>
