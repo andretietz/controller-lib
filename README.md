@@ -10,23 +10,18 @@ This library uses VectorDrawable and has downward-support down to API Level 14 (
 * appcompat 22.1.1
  
 ## How to use in your project:
-To use this library, add a new repository to your repositories, setup in gradle:
+To use this library, add the jcenter repository (if that's not done by default), setup in gradle:
 ```groovy
 allprojects {
     repositories {
         jcenter()
-        ...
-        maven {
-            url "https://jitpack.io"
-        }
-        ...
     }
 }
 ```
 then add this library as a dependency
 
 ```groovy
-compile 'com.github.Unic8:controller-lib:0.0.5'
+compile 'com.unicate.android:controller-lib:1.0.0'
 ```
 
 ## Add both of the Views to your layout:
@@ -101,9 +96,9 @@ Since both views extend from InputView, you can customize a lot with this alread
 
 ### InputView options:
 
-* inputBackground (vector-drawable reference)
-  * This attribute takes (for now only) a VectorDrawable (Create the VectorDrawable (xml) vector-compat compatible!)
-  * This VectorDrawable defines the size of the View (I should fix that, yes)
+* inputBackground (drawable reference)
+  * This attribute takes a Drawable (Create VectorDrawables (xml) vector-compat compatible!)
+  * The size of this drawable defines the maximum size of this View
 * deadZone (0...1)
   * All Buttons are around the center of the view, like pieces of cake. If the user goes too close to the
 center of the view it could happen that he accidentially hits other buttons than he wanted to. To avoid that you can set a deadZone. The value has to be between 0 and 1. 0 means no deadZone, 1 means everything is deadZone ;)

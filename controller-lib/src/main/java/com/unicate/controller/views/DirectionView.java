@@ -19,14 +19,14 @@ public class DirectionView extends InputView {
 	private static final int BUTTON_COUNT = 8;
 
 	// @formatter:off
-	private static final int BUTTON_RIGHT 		= 0;
-	private static final int BUTTON_DOWN_RIGHT 	= 1;
-	private static final int BUTTON_DOWN 		= 2;
-	private static final int BUTTON_DOWN_LEFT 	= 3;
-	private static final int BUTTON_LEFT 		= 4;
-	private static final int BUTTON_UP_LEFT 	= 5;
-	private static final int BUTTON_UP 			= 6;
-	private static final int BUTTON_UP_RIGHT 	= 7;
+	private static final int BUTTON_RIGHT		= 0;
+	private static final int BUTTON_DOWN_RIGHT	= 1;
+	private static final int BUTTON_DOWN		= 2;
+	private static final int BUTTON_DOWN_LEFT	= 3;
+	private static final int BUTTON_LEFT		= 4;
+	private static final int BUTTON_UP_LEFT		= 5;
+	private static final int BUTTON_UP			= 6;
+	private static final int BUTTON_UP_RIGHT	= 7;
 
 	public static final int DIRECTION_RIGHT			= 0x01;
 	public static final int DIRECTION_DOWN_RIGHT	= 0x02;
@@ -36,6 +36,8 @@ public class DirectionView extends InputView {
 	public static final int DIRECTION_UP_LEFT		= 0x20;
 	public static final int DIRECTION_UP			= 0x40;
 	public static final int DIRECTION_UP_RIGHT		= 0x80;
+
+
 	// @formatter:on
 	private boolean diagonalMode = false;
 	private Drawable[][] drawables = new Drawable[BUTTON_COUNT][2];
@@ -102,6 +104,7 @@ public class DirectionView extends InputView {
 		return drawables[buttonIndex][state.ordinal()];
 	}
 
+	@SuppressWarnings("PointlessBitwiseExpression")
 	@Override protected int forceDrawButtons(int buttonPressed) {
 		if (diagonalMode) {
 			for (int i = 1; i < BUTTON_COUNT; i += 2) {
@@ -124,10 +127,5 @@ public class DirectionView extends InputView {
 
 	@Override protected int getButtonCount() {
 		return BUTTON_COUNT;
-	}
-
-	private enum DiagonalMode {
-		DRAWABLE,
-		BETWEEN
 	}
 }

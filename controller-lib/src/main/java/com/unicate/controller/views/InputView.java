@@ -29,19 +29,38 @@ public abstract class InputView extends View {
 
 	private Mode mode;
 
+    /**
+     * @param inputEventListener which is called, when buttons are pressed or released
+     */
 	public void setOnButtonListener(InputEventListener inputEventListener) {
 		listener = inputEventListener;
 	}
 
+    /**
+     * The callback for any events on the buttons
+     */
 	public interface InputEventListener {
+        /**
+         * this method is called, when some button is pressed or released
+         * @param view on which the user is pressing the button
+         * @param buttons Bit-Encoded buttons
+         */
 		void onInputEvent(View view, int buttons);
 	}
 
+    /**
+     * Button States the buttons could be in
+     */
 	public enum ButtonState {
 		NORMAL,
 		PRESSED
 	}
 
+	/**
+	 * Modes this view can be used in.
+	 * single means, that only a single button can be pressed
+	 * at the same time
+	 */
 	protected enum Mode {
 		SINGLE,
 		MULTI
@@ -286,12 +305,24 @@ public abstract class InputView extends View {
         postInvalidate();
     }
 
-    public void vibrate() {
+    /**
+     * if this method is called, the device is vibrating, if this feature is enabled
+     * and the permissions are set
+     */
+    protected void vibrate() {
         if(vibratingEnabled) {
             vibrator.vibrate(VIBRATION_DURATION);
         }
     }
 
+    /**
+     * This can be used to force some buttons to be drawn
+     * i.e. the default DirectionView uses this method to
+     * draw the pressed buttons up and left instead of an own
+     * drawable for up-left
+     * @param buttonPressed Buttons which the user is pressing
+     * @return Buttons the view is supposed to draw
+     */
     protected int forceDrawButtons(int buttonPressed) {
         return buttonPressed;
     }

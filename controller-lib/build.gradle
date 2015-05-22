@@ -7,9 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 1
-        versionName "0.0.5"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -19,7 +18,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.wnafee:vector-compat:1.0.5'
 }
+
+apply from: 'bintray-publish.gradle'
