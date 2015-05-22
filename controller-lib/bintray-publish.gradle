@@ -11,10 +11,16 @@ def issuesUrl = 'https://github.com/Unic8/controller-lib/issues'
 def libraryDescription = ""
 
 def mavenPackageType = 'aar'
+def mavenDeveloperId = 'unicate'
+def mavenDeveloperName = 'Andre'
+def mavenDeveloperEmail = 'andre.tietz@gmail.com'
+def mavenArtifaceName = 'Gamecontroller Library for Android'
 
 def bintrayRepository = 'java'
 def bintrayLabels = ['aar', 'android', 'game-controller']
 def bintrayLicenses = ['Apache-2.0']
+
+
 
 
 Properties properties = new Properties()
@@ -42,7 +48,7 @@ install {
         pom {
             project {
                 packaging mavenPackageType
-                name 'Bintray publish Gradle aar example'
+                name mavenArtifaceName
                 url siteUrl
                 licenses {
                     license {
@@ -52,14 +58,14 @@ install {
                 }
                 developers {
                     developer {
-                        id 'unicate'
-                        name 'Andre Tietz'
-                        email 'andre.tietz@gmail.com'
+                        id mavenDeveloperId
+                        name mavenDeveloperName
+                        email mavenDeveloperEmail
                     }
                 }
                 scm {
-                    connection gitUrl
-                    developerConnection gitUrl
+                    connection codeRepositoryUrl
+                    developerConnection codeRepositoryUrl
                     url siteUrl
 
                 }
