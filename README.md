@@ -10,23 +10,18 @@ This library uses VectorDrawable and has downward-support down to API Level 14 (
 * appcompat 22.1.1
  
 ## How to use in your project:
-To use this library, add a new repository to your repositories, setup in gradle:
+To use this library, add the jcenter repository (if that's not done by default), setup in gradle:
 ```groovy
 allprojects {
     repositories {
         jcenter()
-        ...
-        maven {
-            url "https://jitpack.io"
-        }
-        ...
     }
 }
 ```
 then add this library as a dependency
 
 ```groovy
-compile 'com.github.Unic8:controller-lib:0.0.5'
+compile 'com.unicate.android:controller-lib:0.0.5'
 ```
 
 ## Add both of the Views to your layout:
