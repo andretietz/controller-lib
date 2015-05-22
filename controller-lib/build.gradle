@@ -1,8 +1,5 @@
 apply plugin: 'com.android.library'
 
-group = 'com.unicate'
-version = '0.0.5'
-
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"

@@ -1,12 +1,24 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
+group = 'com.unicate.android'
+version = '0.0.5'
 
 def siteUrl = 'https://github.com/Unic8/controller-lib'
-def gitUrl = 'https://github.com/Unic8/controller-lib.git'
+def codeRepositoryUrl = 'https://github.com/Unic8/controller-lib.git'
+def issuesUrl = 'https://github.com/Unic8/controller-lib/issues'
+
+def libraryDescription = ""
+
+def mavenPackageType = 'aar'
+
+def bintrayRepository = 'java'
+def bintrayLabels = ['aar', 'android', 'game-controller']
+def bintrayLicenses = ['Apache-2.0']
+
+
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
 
 bintray {
     user = properties.getProperty("bintray.user")
@@ -14,15 +26,14 @@ bintray {
 
     configurations = ['archives'] //When uploading configuration files
     pkg {
-        repo = 'android'
+        repo = bintrayRepository
         name = project.name
-        desc = 'Bintray aar publishing example'
+        desc = libraryDescription
         websiteUrl = siteUrl
-        issueTrackerUrl = 'https://github.com/Unic8/controller-lib/issues'
-        vcsUrl = gitUrl
-        licenses = ['Apache-2.0']
-        labels = ['aar', 'android', 'example']
-        publicDownloadNumbers = true
+        issueTrackerUrl = issuesUrl
+        vcsUrl = codeRepositoryUrl
+        licenses = bintrayLicenses
+        labels = bintrayLabels
     }
 }
 
@@ -30,7 +41,7 @@ install {
     repositories.mavenInstaller {
         pom {
             project {
-                packaging 'aar'
+                packaging mavenPackageType
                 name 'Bintray publish Gradle aar example'
                 url siteUrl
                 licenses {
@@ -55,10 +66,6 @@ install {
             }
         }
     }
-}
-
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 task sourcesJar(type: Jar) {
