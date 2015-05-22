@@ -56,6 +56,11 @@ public abstract class InputView extends View {
 		PRESSED
 	}
 
+	/**
+	 * Modes this view can be used in.
+	 * single means, that only a single button can be pressed
+	 * at the same time
+	 */
 	protected enum Mode {
 		SINGLE,
 		MULTI
