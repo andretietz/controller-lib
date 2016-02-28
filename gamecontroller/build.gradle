@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+ext {
+	bintrayRepo = 'java'
+	bintrayName = 'gamecontroller'
+	libraryVersion = '1.1.0'
+	publishedGroupId = 'com.andretietz.android'
+	libraryName = 'Android Gamecontroller'
+	artifact = 'gamecontroller'
+
+	libraryDescription = 'This is an Android Library that supports Views to emulate a simple gamecontroller on android devices'
+
+	siteUrl = 'https://github.com/andretietz/controller-lib'
+	gitUrl = 'https://github.com/andretietz/controller-lib.git'
+
+
+
+	developerId = 'unicate'
+	developerName = 'André Tietz'
+	developerEmail = 'andre.tietz@gmail.com'
+
+	licenseName = 'The Apache Software License, Version 2.0'
+	licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+	allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.2.0'
+}
+
+apply from: 'bintray-publish.gradle'

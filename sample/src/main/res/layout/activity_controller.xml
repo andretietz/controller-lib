@@ -5,7 +5,7 @@
                 android:layout_height="match_parent"
                 tools:context=".ControllerActivity">
 
-    <com.unicate.controller.views.DirectionView
+    <com.andretietz.android.controller.DirectionView
         app:vibrate="true"
         android:id="@+id/viewDirection"
         android:layout_width="wrap_content"
@@ -14,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
-    <com.unicate.controller.views.ActionView
+    <com.andretietz.android.controller.ActionView
         app:vibrate="true"
         android:id="@+id/viewAction"
         android:layout_width="wrap_content"

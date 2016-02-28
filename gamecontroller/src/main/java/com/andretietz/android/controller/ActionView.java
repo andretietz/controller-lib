@@ -1,14 +1,13 @@
-package com.unicate.controller.views;
+package com.andretietz.android.controller;
 
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 
-import com.unicate.controller.R;
-import com.wnafee.vector.compat.ResourcesCompat;
 
 /**
  * This view can be used for action inputs. it has 4 Button, as it is usual
@@ -59,7 +58,7 @@ public class ActionView extends InputView {
 
 	@Override protected Drawable getStateDrawable(int buttonIndex, ButtonState state) {
 		if (null == drawables[buttonIndex][state.ordinal()]) {
-			drawables[buttonIndex][state.ordinal()] = ResourcesCompat.getDrawable(getContext(), resources[buttonIndex][state.ordinal()]);
+			drawables[buttonIndex][state.ordinal()] = ContextCompat.getDrawable(getContext(), resources[buttonIndex][state.ordinal()]);
 		}
 		return drawables[buttonIndex][state.ordinal()];
 	}
