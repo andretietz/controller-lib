@@ -1,7 +1,7 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-group = 'com.unicate.android'
+group = 'com.andretietz.android'
 version = '1.0.0'
 
 // Before deploying your project to maven central the first time, you have to create a jira ticket for the project
@@ -26,17 +26,19 @@ def bintrayLicenses = ['Apache-2.0']
 
 
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 
 bintray {
+
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
 
     configurations = ['archives'] //When uploading configuration files
     pkg {
         repo = bintrayRepository
-        name = project.name
+        name = 'gamecontroller'
         desc = libraryDescription
         websiteUrl = siteUrl
         issueTrackerUrl = issuesUrl

@@ -1,1 +1,1 @@
-include ':sample', ':controller-lib'
+include ':sample', ':library'

@@ -3,31 +3,22 @@ This Android-library should help you to show a common game controller on the scr
 
 At the moment the only supported Buttons are the Directionbuttons (8-way) and the Action-Input of a user, such as on the Playstation- or the XBox-Controller
 
-This library uses VectorDrawable and has downward-support down to API Level 14 (using vector-compat)
+This library uses VectorDrawable and has downward-support down to API Level 14
 
 ## Dependencies:
-* [vector-compat](https://github.com/wnafee/vector-compat) in Version 1.0.5
-* appcompat 22.1.1
+* appcompat 23.2.0
  
 ## How to use in your project:
-To use this library, add the jcenter repository (if that's not done by default), setup in gradle:
-```groovy
-allprojects {
-    repositories {
-        jcenter()
-    }
-}
-```
-then add this library as a dependency
+Add this library as a dependency
 
 ```groovy
-compile 'com.unicate.android:controller-lib:1.0.0'
+compile 'com.andretietz.android:gamecontroller:1.0.0'
 ```
 
 ## Add both of the Views to your layout:
 
 ```xml
-    <com.unicate.controller.views.DirectionView
+    <com.andretietz.android.controller.DirectionView
         android:id="@+id/viewDirection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,7 +26,7 @@ compile 'com.unicate.android:controller-lib:1.0.0'
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
-    <com.unicate.controller.views.ActionView
+    <com.andretietz.android.controller.ActionView
         android:id="@+id/viewAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,7 +109,7 @@ Example:
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto" />
                     ...
-    <com.unicate.controller.views.DirectionView
+    <com.andretietz.android.controller.views.DirectionView
         app:inputBackground="@drawable/my_vectordrawable"
         app:vibrate="true"
         android:id="@+id/viewDirection"

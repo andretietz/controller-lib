@@ -1,4 +1,4 @@
-package com.unicate.controller.views;
+package com.andretietz.android.controller;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -13,13 +13,11 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Vibrator;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-
-import com.unicate.controller.R;
-import com.wnafee.vector.compat.ResourcesCompat;
 
 
 /**
@@ -148,7 +146,7 @@ public abstract class InputView extends View {
             a.recycle();
         }
 
-        Drawable backgroundDrawable = ResourcesCompat.getDrawable(getContext(), background);
+        Drawable backgroundDrawable = ContextCompat.getDrawable(getContext(), background);
         height = backgroundDrawable.getIntrinsicHeight();
         width = backgroundDrawable.getIntrinsicWidth();
 

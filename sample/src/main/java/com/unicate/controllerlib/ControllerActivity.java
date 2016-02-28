@@ -1,19 +1,19 @@
 package com.unicate.controllerlib;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.unicate.controller.views.ActionView;
-import com.unicate.controller.views.DirectionView;
-import com.unicate.controller.views.InputView;
+import com.andretietz.android.controller.ActionView;
+import com.andretietz.android.controller.DirectionView;
+import com.andretietz.android.controller.InputView;
 
 /**
  * a simple activity to show a demo of the ControllerView
  */
-public class ControllerActivity extends ActionBarActivity implements InputView.InputEventListener {
+public class ControllerActivity extends AppCompatActivity implements InputView.InputEventListener {
 
 	private TextView textAction;
 	private TextView textDirection;
@@ -34,11 +34,11 @@ public class ControllerActivity extends ActionBarActivity implements InputView.I
 		switch (view.getId()) {
 			case R.id.viewAction:
 				Log.e("ACTION", "buttons: " + buttons);
-				textAction.setText("Action: " + actionButtonsToString(buttons));
+				textAction.setText(String.format("Action: %s", actionButtonsToString(buttons)));
 				break;
 			case R.id.viewDirection:
 				Log.e("DIRECTION", "buttons: " + buttons);
-				textDirection.setText("Direction: " + directionButtonsToString(buttons));
+				textDirection.setText(String.format("Direction: %s", directionButtonsToString(buttons)));
 				break;
 		}
 	}
