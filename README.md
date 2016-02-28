@@ -12,7 +12,7 @@ This library uses VectorDrawable and has downward-support down to API Level 14
 Add this library as a dependency
 
 ```groovy
-compile 'com.andretietz.android:gamecontroller:1.0.0'
+compile 'com.andretietz.android:gamecontroller:1.1.0'
 ```
 
 ## Add both of the Views to your layout:
