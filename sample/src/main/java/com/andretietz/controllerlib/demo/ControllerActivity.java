@@ -1,4 +1,4 @@
-package com.unicate.controllerlib;
+package com.andretietz.controllerlib.demo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,10 +21,10 @@ public class ControllerActivity extends AppCompatActivity implements InputView.I
 	@Override protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_controller);
-		textAction = (TextView) findViewById(R.id.textAction);
-		textDirection = (TextView) findViewById(R.id.textDirection);
-		DirectionView directionView = (DirectionView) findViewById(R.id.viewDirection);
-		ActionView actionView = (ActionView) findViewById(R.id.viewAction);
+		textAction = findViewById(R.id.textAction);
+		textDirection = findViewById(R.id.textDirection);
+		DirectionView directionView = findViewById(R.id.viewDirection);
+		ActionView actionView = findViewById(R.id.viewAction);
 		actionView.setOnButtonListener(this);
 		directionView.setOnButtonListener(this);
 

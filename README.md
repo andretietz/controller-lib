@@ -6,13 +6,13 @@ At the moment the only supported Buttons are the Directionbuttons (8-way) and th
 This library uses VectorDrawable and has downward-support down to API Level 14
 
 ## Dependencies:
-* appcompat 23.2.0
+* appcompat 25.1.0
  
 ## How to use in your project:
 Add this library as a dependency
 
 ```groovy
-compile 'com.andretietz.android:gamecontroller:1.1.0'
+compile 'com.andretietz.android:gamecontroller:1.1.1'
 ```
 
 ## Add both of the Views to your layout:
@@ -158,5 +158,17 @@ The buttons are drawn from the right to the bottom, to the left - up and to the 
 # Screenshot
 ![screenshot_2015-03-21-17-55-19](https://cloud.githubusercontent.com/assets/2174386/6766014/971adf68-cff5-11e4-9f7d-530251462886.png)
 
+## License
+    Copyright 2017 André Tietz
 
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
