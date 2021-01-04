@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    api 'com.android.support:appcompat-v7:27.0.2'
+    api "com.android.support:appcompat-v7:$supportLibraryVersion"
     implementation project(':gamecontroller')
 }
